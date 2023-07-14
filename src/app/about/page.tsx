@@ -1,9 +1,15 @@
 import React from 'react'
+import Trips from './components/Trips'
 
-function Page() {
+export const metadata = {
+    title: 'About'
+}
+
+
+function page() {
   return (
-    <div>index</div>
+    <div><Trips/></div>
   )
 }
 
-export default Page
+export default page
