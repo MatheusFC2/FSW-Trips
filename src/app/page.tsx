@@ -1,5 +1,15 @@
+"use client"
+
+import QuickSearch from "./components/QuickSearch"
+import RecommendedTrips from "./components/RecommendedTrips"
+import TripSearch from "./components/TripSearch"
+
 export default function Home() {
   return (
-    <h1>Homa page</h1>
+    <div>
+      <TripSearch/>
+      <QuickSearch/>
+      <RecommendedTrips/>
+    </div>
   )
 }
