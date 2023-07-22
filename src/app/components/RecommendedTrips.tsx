@@ -3,10 +3,14 @@ import { prisma } from "@/lib/prisma";
 import { Trip } from "@prisma/client";
 import React from "react";
 
+async function getTrips() {
+  const trips = await prisma.trip.findMany({});
 
+  return trips;
+}
 
 const RecommendedTrips = async () => {
-    const data = await fetch("http://localhost:3000/hello").then((res) =>  res.json());
+  const data = await getTrips();
 
   return (
     <div className="container mx-auto p-5">
@@ -22,7 +26,7 @@ const RecommendedTrips = async () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default RecommendedTrips
+export default RecommendedTrips;
